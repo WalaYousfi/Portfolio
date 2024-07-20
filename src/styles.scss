@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+// @import url("https://use.typekit.net/jnq3uxd.css");
+
+// $custom-typography: mat.define-typography-config(
+//     $font-family: "sofia-pro",
+// );
+// $density: 0;
+
+@include mat.core();
+
+
+$custom-pink-palette: (
+    50:#FCE4EC,
+    100: #F8BBD0,
+    200: #F48FB1,
+    300: #F06292,
+    400: #f56595,
+    500: #ed5386,
+    600:  #c7517c,
+    700: #d3417b,
+    800: #cd3879,
+    900: #cb4c8f,
+    A100: #FF80AB,
+    A200: #FF4081,
+    A400: #ff2e77,
+    A700: #db4c8c,
+    contrast: (
+        50: rgba(0, 0, 0, 0.87),
+        100: rgba(0, 0, 0, 0.87),
+        200: rgba(0, 0, 0, 0.87),
+        300: rgba(0, 0, 0, 0.87),
+        400: rgba(0, 0, 0, 0.87),
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+      ),
+);
+
+$custom-blue-palette: (
+    50: #E0F7FA,
+    100: #B2EBF2,
+    200: #80DEEA,
+    300: #4DD0E1,
+    400: #26C6DA,
+    500: #00BCD4,
+    600: #00ACC1,
+    700: #0097A7,
+    800: #00838F,
+    900: #006064,
+    A100: #84FFFF,
+    A200: #18FFFF,
+    A400: #00E5FF,
+    A700: #00B8D4,
+    contrast: (
+        50: rgba(0, 0, 0, 0.87),
+        100: rgba(0, 0, 0, 0.87),
+        200: rgba(0, 0, 0, 0.87),
+        300: rgba(0, 0, 0, 0.87),
+        400: rgba(0, 0, 0, 0.87),
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+      ),
+);
+
+$custom-pink: mat.define-palette($custom-pink-palette);
+$custom-blue: mat.define-palette($custom-blue-palette);
+$mat-red: mat.define-palette(mat.$red-palette);
+
+
+
+$theme-dark: mat.define-dark-theme(
+    (
+        color:(
+            primary: $custom-pink,
+            accent: $custom-blue,
+            warn: $mat-red,
+        ),
+        typography: mat.define-typography-config(),
+        density: 0,
+    )
+);
+
+$theme-light: mat.define-light-theme(
+    (
+        color:(
+            primary: $custom-pink,
+            accent: $custom-blue,
+            warn: $mat-red,
+        ),
+        typography: mat.define-typography-config(),
+        density: 0,
+    )
+);
+
+// @include mat.all-component-colors($Portfolio-theme);
+// @include mat.all-component-colors($theme-dark);
+
+.theme-dark{
+    @include mat.all-component-colors($theme-dark);
+}
+
+.theme-light{
+    @include mat.all-component-colors($theme-light);
+}
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "sofia-pro", sans-serif;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
