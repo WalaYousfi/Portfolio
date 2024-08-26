@@ -1,0 +1,82 @@
+* {
+  font-size: 17px;
+}
+.title {
+  position: relative;
+  font-size: 4em;
+  padding: 20px 10px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background-color: var(--main-color);
+}
+.content {
+  padding: 20px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+img {
+  height: 340px;
+  width: 270px;
+  border-radius: 50%;
+  justify-self: center;
+}
+.content section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.personal-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.pseudo-title {
+  font-size: 2.5em;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+p span {
+  color: var(--main-color);
+}
+.left-border {
+  border-left: 4px solid gainsboro;
+  padding-left: 20px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5em; //for spacing bettween the lines
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 70px;
+  }
+  .content section {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+
+  .container {
+    gap: 27px;
+  }
+  .personal-info {
+    column-gap: 15px;
+  }
+  .left-border {
+    height: 220px;
+  }
+  .align-text ,.pseudo-title{
+    text-align: center;
+  }
+}

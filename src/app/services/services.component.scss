@@ -1,0 +1,23 @@
+.title {
+    position: relative;
+    font-size: 4em;
+    padding: 20px 10px;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%; 
+    height: 3px; 
+    background-color: var(--main-color); 
+}
+.content {
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }

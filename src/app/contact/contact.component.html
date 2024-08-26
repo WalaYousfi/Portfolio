@@ -1,0 +1,79 @@
+<div class="content">
+  <span class="title">Contact</span>
+  <p>
+    Explore my portfolio to see how I bring ideas to life through fullstack
+    development. Let's collaborate to build something remarkable together.
+  </p>
+  <p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26168.291264683005!2d9.175557798437366!3d34.930623846105185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fed4c99298ca97%3A0x5e0eac2069a348d5!2sBir%20Al%20Huffay!5e0!3m2!1sen!2stn!4v1723651466374!5m2!1sen!2stn"
+      width="900"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </p>
+  <section>
+    <div class="container">
+      <div class="personal-info">
+        <mat-icon class="material-symbols-outlined">location_on</mat-icon>
+        <div class="text-content">
+          <span>Location:</span>
+          <p>My address is</p>
+        </div>
+      </div>
+
+      <div class="personal-info">
+        <mat-icon class="material-symbols-outlined">mail</mat-icon>
+        <div class="text-content">
+          <span>Email:</span>
+          <p>yousfiwala9&#64;gmail.com</p>
+        </div>
+      </div>
+      <div class="personal-info">
+        <mat-icon class="material-symbols-outlined">smartphone</mat-icon>
+        <div class="text-content">
+          <span>Call:</span>
+          <p>+219 58 000 297</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="example-form">
+      <div>
+        <mat-form-field>
+          <mat-label>Your Name</mat-label>
+          <input matInput placeholder="Your Name" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            [formControl]="emailFormControl"
+            [errorStateMatcher]="matcher"
+            placeholder="Ex. pat@example.com"
+          />
+          <mat-hint>Errors appear instantly!</mat-hint>
+          @if (emailFormControl.hasError('email') &&
+          !emailFormControl.hasError('required')) {
+          <mat-error>Please enter a valid email address</mat-error>
+          } @if (emailFormControl.hasError('required')) {
+          <mat-error>Email is <strong>required</strong></mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Subject</mat-label>
+        <input matInput placeholder="The Subject..." />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Leave a message</mat-label>
+        <textarea matInput placeholder="Your Message.."></textarea>
+      </mat-form-field>
+    </form>
+  </section>
+</div>

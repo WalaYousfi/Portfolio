@@ -1,0 +1,59 @@
+<div class="content">
+  <span class="title">My Projects</span>
+
+  <swiper-container
+    class="mySwiper"
+    pagination="true"
+    pagination-dynamic-bullets="true"
+    effect="coverflow"
+    grab-cursor="true"
+    centered-slides="true"
+    slides-per-view="auto"
+    coverflow-effect-rotate="50"
+    coverflow-effect-stretch="0"
+    coverflow-effect-depth="100"
+    coverflow-effect-modifier="1"
+    coverflow-effect-slide-shadows="true"
+    loop="true"
+  >
+    <swiper-slide class="card-container" *ngFor="let project of projects">
+      <div class="profile-card">
+        <div></div>
+        <swiper-container
+          class="image"
+          pagination="true"
+          pagination-dynamic-bullets="true"
+          effect="cube"
+          grab-cursor="true"
+          cube-effect-shadow="true"
+          cube-effect-slide-shadows="true"
+          cube-effect-shadow-offset="20"
+          cube-effect-shadow-scale="0.94"
+          loop="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="true"
+        >
+          <swiper-slide class="slide">
+            <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+          </swiper-slide>
+          <swiper-slide class="slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </swiper-slide>
+          <swiper-slide class="slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </swiper-slide>
+          <swiper-slide class="slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </swiper-slide>
+        </swiper-container>
+        <span>{{ project.title }}</span>
+
+        <div class="description">
+          {{ project.description }}
+        </div>
+
+        <a href="#" class="btn">Message</a>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>
