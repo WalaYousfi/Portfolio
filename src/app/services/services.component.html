@@ -5,22 +5,16 @@
     development. Let's collaborate to build something remarkable together.
   </p>
   <section class="card-container">
-    
-
-      <div class="profile-card" *ngFor="let service of services">
-        <div class="icon">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-
-        </div>
-   
-
-        <span>{{ service.title }}</span>
-
-        <div class="description">
-          {{ service.description }}
-        </div>
-
+    <div class="profile-card" *ngFor="let service of services">
+      <div class="icon">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </div>
-   
+
+      <span>{{ service.title }}</span>
+
+      <div class="description">
+        {{ service.description }}
+      </div>
+    </div>
   </section>
 </div>

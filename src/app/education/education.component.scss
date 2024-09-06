@@ -1,3 +1,6 @@
+* {
+	font-size: 17px;
+  }
 .title {
     position: relative;
     font-size: 4em;
@@ -73,7 +76,7 @@ main.row{
 .box p{
 	line-height: 1.2;
 	color: #666;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 @media(max-width: 768px){
 	.box{
