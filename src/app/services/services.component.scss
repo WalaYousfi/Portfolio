@@ -3,7 +3,7 @@
 }
 .title {
   position: relative;
-  font-size: 4em;
+  font-size: 3.5em;
   padding: 20px 10px;
 }
 
@@ -23,6 +23,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.change-color {
+  color: rgb(92, 90, 90);
+  text-align: center;
 }
 .card-container {
   background-position: center;
@@ -54,20 +58,21 @@
 .profile-card:hover {
   box-shadow: 0 5px 20px var(--main-color);
 }
+
+mat-icon{
+  font-size: 50px;
+  height: 60px;
+  width: 60px;
+}
+
 @media (max-width: 968px) {
   .card-container {
- 
-    grid-template-columns: 1fr 1fr ;
-   
+    grid-template-columns: 1fr 1fr;
   }
-
 }
 
 @media (max-width: 668px) {
   .card-container {
- 
-    grid-template-columns: 1fr ;
-   
+    grid-template-columns: 1fr;
   }
-
 }

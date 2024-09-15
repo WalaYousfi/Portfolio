@@ -1,14 +1,19 @@
+<link
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  rel="stylesheet"
+/>
 <div class="content">
   <span class="title">Services</span>
-  <p>
-    Explore my portfolio to see how I bring ideas to life through fullstack
-    development. Let's collaborate to build something remarkable together.
+  <p class="change-color">
+    Throughout my studies and hands-on experience, I have developed a strong set
+    of technical skills that form the foundation of my full-stack development
+    journey. Here are some of the key hard skills I've acquired:
   </p>
+
   <section class="card-container">
     <div class="profile-card" *ngFor="let service of services">
       <div class="icon">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </div>
+<i class={{service.icon}} style = {{service.style}}> </i>    </div>
 
       <span>{{ service.title }}</span>
 

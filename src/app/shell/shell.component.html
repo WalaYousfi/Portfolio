@@ -41,7 +41,7 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="logo"><span>Wala</span> Yousfi</span>
+      <span routerLink="/" class="logo"><span>Wala</span> Yousfi</span>
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
         <a routerLink="/" (click)="drawer.close()"
@@ -56,5 +56,6 @@
     </mat-toolbar>
     <app-social-media></app-social-media>
     <ng-content></ng-content>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

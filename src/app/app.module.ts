@@ -26,6 +26,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { AboutComponent } from './about/about.component';
     ContactComponent,
     SocialMediaComponent,
     AboutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

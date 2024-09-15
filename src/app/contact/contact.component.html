@@ -1,14 +1,14 @@
 <div class="content">
   <span class="title">Contact</span>
-  <p>
-    Explore my portfolio to see how I bring ideas to life through fullstack
-    development. Let's collaborate to build something remarkable together.
+  <p class="change-color">
+    In the contact section, you can find my address and reach out to me directly
+    via Gmail or through my other social media profiles.
   </p>
   <p>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26168.291264683005!2d9.175557798437366!3d34.930623846105185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fed4c99298ca97%3A0x5e0eac2069a348d5!2sBir%20Al%20Huffay!5e0!3m2!1sen!2stn!4v1723651466374!5m2!1sen!2stn"
-      width="900"
-      height="300"
+      [width]="(isHandset$ | async) ? '500' : '900'"
+      [height]="(isHandset$ | async) ? '300' : '300'"
       style="border: 0"
       allowfullscreen=""
       loading="lazy"
@@ -21,7 +21,7 @@
         <mat-icon class="material-symbols-outlined">location_on</mat-icon>
         <div class="text-content">
           <span>Location:</span>
-          <p>My address is</p>
+          <p>Bir Elhafay, Tawfik City, Sidi Bouzid, Tunisia</p>
         </div>
       </div>
 
@@ -41,15 +41,16 @@
       </div>
     </div>
 
-    <form class="example-form">
+    <form class="example-form" [formGroup]="exampleForm" (submit)="sendEmail()">
       <div>
         <mat-form-field>
           <mat-label>Your Name</mat-label>
-          <input matInput placeholder="Your Name" />
+          <input formControlName="name" matInput placeholder="Your Name" />
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
           <input
+            formControlName="email"
             type="email"
             matInput
             [formControl]="emailFormControl"
@@ -67,13 +68,22 @@
       </div>
       <mat-form-field class="example-full-width">
         <mat-label>Subject</mat-label>
-        <input matInput placeholder="The Subject..." />
+        <input
+          formControlName="subject"
+          matInput
+          placeholder="The Subject..."
+        />
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Leave a message</mat-label>
-        <textarea matInput placeholder="Your Message.."></textarea>
+        <textarea
+          formControlName="message"
+          matInput
+          placeholder="Your Message.."
+        ></textarea>
       </mat-form-field>
+      <input class="submit-btn" type="submit" value="Submit" />
     </form>
   </section>
 </div>

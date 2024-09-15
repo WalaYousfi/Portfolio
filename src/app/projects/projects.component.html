@@ -1,8 +1,10 @@
 <div class="content">
   <span class="title">My Projects</span>
-  <p>
-    Explore my portfolio to see how I bring ideas to life through fullstack
-    development. Let's collaborate to build something remarkable together.
+  <p class="change-color">
+    Now, let me take you through the personal projects and internship
+    experiences that have shaped my skills as a developer. These projects
+    allowed me to apply what I've learned and solve real-world problems,
+    yielding meaningful results.
   </p>
   <swiper-container
     class="mySwiper"
@@ -36,17 +38,8 @@
           autoplay-delay="2500"
           autoplay-disable-on-interaction="true"
         >
-          <swiper-slide class="slide">
-            <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
-          </swiper-slide>
-          <swiper-slide class="slide">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </swiper-slide>
-          <swiper-slide class="slide">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </swiper-slide>
-          <swiper-slide class="slide">
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <swiper-slide class="slide" *ngFor="let image of project.images">
+            <img src="{{ image }}" />
           </swiper-slide>
         </swiper-container>
         <span>{{ project.title }}</span>
@@ -55,7 +48,9 @@
           {{ project.description }}
         </div>
 
-        <a href="#" class="btn">Message</a>
+        <a href="{{ project.ProjectLink }}" target="_blank" class="btn"
+          >View Code</a
+        >
       </div>
     </swiper-slide>
   </swiper-container>
