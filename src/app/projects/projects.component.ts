@@ -45,5 +45,18 @@ export class ProjectsComponent {
         '/assets/club4.png',
       ],
     },
+    {
+      title: 'Naruto Website',
+      description:
+      'A responsive website built with Angular that showcases information about the Naruto anime. It features an interactive and user-friendly design, allowing users to explore character details, episodes, and storylines.',
+      ProjectLink: 'https://github.com/WalaYousfi/Naruto',
+      images: [
+        '/assets/naruto1.png',
+        '/assets/naruto2.png',
+        '/assets/naruto3.png',
+        '/assets/naruto4.png',
+        '/assets/naruto5.png',
+    ],
+    },
   ];
 }
