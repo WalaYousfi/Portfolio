@@ -44,15 +44,26 @@
       <span routerLink="/" class="logo"><span>Wala</span> Yousfi</span>
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a routerLink="/" (click)="drawer.close()"
-          ><span class="hilight">Home</span></a
-        >
-        <a routerLink="/about" (click)="drawer.close()">About</a>
-        <a routerLink="/education" (click)="drawer.close()">Education</a>
-        <a routerLink="/services" (click)="drawer.close()">Services</a>
-        <a routerLink="/projects" (click)="drawer.close()">Projects</a>
-        <a routerLink="/contacts" (click)="drawer.close()">Contact</a>
+        <a routerLink="/" routerLinkActive="active" (click)="drawer.close()">
+          <span class="hilight">Home</span>
+        </a>
+        <a routerLink="/about" routerLinkActive="active" (click)="drawer.close()">
+          About
+        </a>
+        <a routerLink="/education" routerLinkActive="active" (click)="drawer.close()">
+          Education
+        </a>
+        <a routerLink="/services" routerLinkActive="active" (click)="drawer.close()">
+          Services
+        </a>
+        <a routerLink="/projects" routerLinkActive="active" (click)="drawer.close()">
+          Projects
+        </a>
+        <a routerLink="/contacts" routerLinkActive="active" (click)="drawer.close()">
+          Contact
+        </a>
       </div>
+      
     </mat-toolbar>
     <app-social-media></app-social-media>
     <ng-content></ng-content>

@@ -1,6 +1,9 @@
 @use "@angular/material" as mat;
-
+@import url("https://use.typekit.net/jnq3uxd.css");
 @include mat.core();
+$custom-typography: mat.define-typography-config(
+  $font-family: "sofia-pro",
+);
 
 $custom-pink-palette: (
   50: #fce4ec,
@@ -102,15 +105,12 @@ $theme-light: mat.define-light-theme(
 html,
 body {
   height: 100%;
-
 }
 body {
   margin: 0;
 }
-*{
-    font-family: "Dancing Script", cursive;
-    font-weight: bolder;
-
+* {
+  font-family: df;
 }
 a {
   color: black;
@@ -118,6 +118,4 @@ a {
 }
 :root {
   --main-color: rgb(67, 183, 171);
-  font-family: "Dancing Script", cursive;
-
 }

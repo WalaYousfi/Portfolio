@@ -7,6 +7,7 @@
   cursor: pointer;
   outline: none;
   transition: 0.3s ease;
+  font-family: "Dancing Script", cursive;
 }
 .logo:hover {
   transform: scale(1.1);
@@ -14,6 +15,7 @@
 .logo span {
   text-shadow: 0 0 25px var(--main-color);
   color: var(--main-color);
+  font-family: "Dancing Script", cursive;
 }
 .mat-drawer-side {
   border: none;
@@ -27,10 +29,12 @@
 
 .sidenav .mat-toolbar {
   background: inherit;
+  position:fixed;
+
 }
 
 .mat-toolbar.mat-primary {
-  position: sticky;
+  position:fixed;
   top: 0;
   z-index: 1;
 }
@@ -48,7 +52,8 @@ a {
   border-bottom: 3px solid transparent;
 }
 a:hover,
-a span.hilight {
+a span.hilight,
+a.active {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
