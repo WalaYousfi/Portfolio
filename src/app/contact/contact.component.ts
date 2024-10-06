@@ -56,26 +56,28 @@ export class ContactComponent {
   }
 
   sendEmail() {
-    const formValues = this.exampleForm.value;
-    const name = formValues.name;
-    const subject = formValues.subject;
-    const email = formValues.email;
-    const message = formValues.message;
+ if(this.exampleForm){
+  const formValues = this.exampleForm.value;
+  const name = formValues.name;
+  const subject = formValues.subject;
+  const email = formValues.email;
+  const message = formValues.message;
 
-    const templateParams ={
-      name,email, message, subject
-    };
+  const templateParams ={
+    name,email, message, subject
+  };
 
-    emailjs.init({publicKey: 'TkJAXRt53dej08r9h'});
-   
-    emailjs.send('service_soixqtm', 'template_hpe64kp', templateParams).then(
-      (response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      },
-      (error) => {
-        console.log('FAILED...', error);
-      },
-    );
+  emailjs.init({publicKey: 'TkJAXRt53dej08r9h'});
+ 
+  emailjs.send('service_soixqtm', 'template_hpe64kp', templateParams).then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
+ }
   }
   
   ngOnInit(): void {}

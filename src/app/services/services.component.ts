@@ -63,5 +63,19 @@ export class ServicesComponent {
         'Bring websites and applications to life with dynamic, interactive elements using JavaScript.',
       style: 'color:#56ff72',
     },
+    {
+      title: 'Git',
+      icon: 'bx bxl-git bx-md',
+      description:
+        'Manage and track your code efficiently with Git, enabling seamless version control and collaboration across teams.',
+      style: 'color:#57237A',
+    },
+    {
+      title: 'Bootstrap',
+      icon: 'bx bxl-bootstrap bx-md',
+      description:
+        'Design responsive, mobile-first web pages effortlessly with Bootstrap, leveraging its powerful grid system and pre-built components.',
+      style: 'color:#3FC518',
+    },
   ];
 }
