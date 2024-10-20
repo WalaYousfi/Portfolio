@@ -29,12 +29,11 @@
 
 .sidenav .mat-toolbar {
   background: inherit;
-  position:fixed;
-
+  position: fixed;
 }
 
 .mat-toolbar.mat-primary {
-  position:fixed;
+  position: fixed;
   top: 0;
   z-index: 1;
 }
@@ -68,9 +67,16 @@ mat-icon {
 }
 
 @media (max-width: 768px) {
+  .fill-space {
+    display: none;
+  }
   .mat-toolbar {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 2fr 50px;
+  }
+  .side {
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
   }
 }
