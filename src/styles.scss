@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@import url("https://use.typekit.net/jnq3uxd.css");
+//@import url("https://use.typekit.net/jnq3uxd.css");
 @include mat.core();
 $custom-typography: mat.define-typography-config(
   $font-family: "sofia-pro",

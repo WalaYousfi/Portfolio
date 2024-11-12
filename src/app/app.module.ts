@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {
   BrowserModule,
   provideClientHydration,
@@ -27,6 +27,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+
+import { environment } from '../environments/environment';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { AngularFireModule } from '@angular/fire/compat';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +60,7 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
