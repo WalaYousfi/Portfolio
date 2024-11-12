@@ -28,10 +28,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { environment } from '../environments/environment';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { AngularFireModule } from '@angular/fire/compat';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +56,6 @@ import { AngularFireModule } from '@angular/fire/compat';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
